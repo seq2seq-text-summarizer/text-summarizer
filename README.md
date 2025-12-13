@@ -3,27 +3,30 @@
 ## High-Level Architecture Overview
 
 ```
-Long Text → Encoder LSTM → Context Vector → Decoder LSTM → Summary
+Dialogue → Transformer Encoder → Multi-Head Attention → Transformer Decoder → Summary
 ```
 
 ### Main Components
 - Tokenizer & Vocabulary
-- Encoder (LSTM)
-- Context Vector (Hidden & Cell States)
-- Decoder (LSTM)
-- Softmax Output Layer
+- Positional Encoding
+- Multi-Head Self-Attention
+- Transformer Encoder (6 layers)
+- Transformer Decoder (6 layers)
+- Feed-Forward Networks
+- Layer Normalization
 - Loss Function (Cross-Entropy)
 
 ### Model Characteristics
-
 | Feature | Description |
 |---------|-------------|
 | Model Type | Generative |
-| Architecture | Encoder–Decoder |
-| Sequence Handling | Variable-length |
-| Output | Summary text |
+| Architecture | Transformer (Encoder-Decoder) |
+| Attention | Multi-Head Self-Attention |
+| Sequence Handling | Parallel processing |
+| Output | Novel summary text |
 | Training | Supervised |
 | Decoding | Autoregressive |
 
+
 ### Dataset
-[kaggle/newspaper-text-summarization-cnn-dailymail](https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail/)
+TBD
